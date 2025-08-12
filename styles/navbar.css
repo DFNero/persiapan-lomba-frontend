@@ -1,7 +1,13 @@
 .container-fluid {
   display: flex;
-  justify-content: space-between; /* Logo+nav di kiri, sisanya di kanan */
-  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 
+  5px 5px 3px #666666, 
+  -5px -5px 3px #ffffff;
 }
 
 .nav-left {
@@ -12,8 +18,25 @@
 
 .navbar-nav {
   display: flex;
-  flex-direction: row; /* Horizontal */
+  flex-direction: row;
   gap: 15px;
+  
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1.01);
+}
+
+.navbar-nav a:hover {
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow:
+  inset 5px 5px 2px #666666,
+  inset -5px -5px 2px #ffffff;
 }
 
 .nav-right {
