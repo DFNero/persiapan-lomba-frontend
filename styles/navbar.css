@@ -1,0 +1,23 @@
+.container-fluid {
+  display: flex;
+  justify-content: space-between; /* Logo+nav di kiri, sisanya di kanan */
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Horizontal */
+  gap: 15px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
