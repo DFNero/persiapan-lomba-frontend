@@ -20,26 +20,21 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
-  
 }
 
-.navbar-nav a {
-  text-decoration: none;
-  border: 2px solid black;
-  color: black;
+.nav-item {
+  border: 1px solid black;
+  border-radius: 30px;
   padding: 5px 10px;
-  border-radius: 15px;
-  box-shadow: 
-  5px 5px 0px #000000, 
-  -5px -5px 0px #ffffff;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
   transition: all 0.3s cubic-bezier(1, 0, 0, 1.01);
 }
 
-.navbar-nav a:hover {
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow:
-  inset 5px 5px 0px #000000,
+.nav-item:hover {
+  box-shadow: 
+  inset 5px 5px 0px #000000, 
   inset -5px -5px 0px #ffffff;
 }
 
@@ -60,7 +55,7 @@
 .btn-3d:hover {
   border: 1px solid #09ff00;
   box-shadow: 
-  inset 5px 5px 0px #666666, 
+  inset 5px 5px 0px #000000, 
   inset -5px -5px 0px #ffffff;
   background: #ffffff;
   color: black;
