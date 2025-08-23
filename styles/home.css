@@ -1,54 +1,82 @@
-/* home.css */
-.hero-section {
-  height: 70vh; /* bisa diganti 70vh kalau nggak mau full layar */
-  display: flex;
-  align-items: center; /* konten vertikal ke tengah */
-  justify-content: center; /* horizontal center */
-  text-align: center;
-
-  background: url('../public/img-icon/smartFarmHero.png') no-repeat center center;
-  background-size: cover;
-  color: white;
+/* Hero Section */
+.hero {
+  top: 0;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  color: #fff;
 }
 
-.hero-section .container {
-  z-index: 2;
-}
-
-.hero-section::after {
-  /* overlay biar text jelas */
-  content: "";
+/* Jadikan <img> sebagai background */
+.heroImage {
   position: absolute;
-  top: 0; left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay gelap biar teks terbaca */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
-.hero-section .hero-content {
+/* Konten di atas gambar */
+.heroContent {
   position: relative;
-  z-index: 3; /* biar di atas overlay */
+  z-index: 2;
+  max-width: 700px;
+  text-align: center; /* default center, desktop bisa diubah */
 }
 
-/* Responsif untuk tablet & HP */
-@media (max-width: 992px) {
-  .hero-section {
-    height: 70vh;
-    background-position: top; /* fokus ke atas biar ga kepotong */
+/* Title & Subtitle */
+.heroTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.heroButton {
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .heroContent {
+    text-align: left;
+  }
+  .heroTitle {
+    font-size: 2.4rem;
   }
 }
 
-@media (max-width: 576px) {
-  .hero-section {
-    height: 60vh;
-    padding: 20px;
-  }
-  .hero-content h1 {
+/* Mobile */
+@media (max-width: 767px) {
+  .heroTitle {
     font-size: 1.8rem;
   }
-  .hero-content p {
+  .heroSubtitle {
     font-size: 1rem;
+  }
+  .heroButton {
+    width: 100%;
+    padding: 12px 0;
   }
 }
